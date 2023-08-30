@@ -1,0 +1,44 @@
+## ls
+if command -v gls &> /dev/null # MacOS, if gnu ls is installed (brew install coreutils)
+then
+    alias ls='gls --color=auto'
+else
+    alias ls='ls -G --color=auto'
+fi
+alias l='ls -l'
+alias ll='ls -lahF'
+alias lls='ls -lahFtr'
+alias la='ls -A'
+alias lc='ls -CF'
+
+## grep
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+## git
+alias gc='git commit'
+alias gs='git status'
+alias gss='git status -s'
+alias ga='git add'
+alias gp='git push'
+alias gb='git branch'
+alias gd='git diff'
+alias gco='git checkout'
+alias gl='git log --pretty=oneline'
+alias gr='git remote'
+alias grs='git remote show'
+alias glol='git log --graph --abbrev-commit --oneline --decorate'
+alias gsub="git submodule update --remote" # pull submodules
+alias gcp="git cherry-pick"
+
+## zsh
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
+## poetry
+alias pshell='source $(poetry env list --full-path| cut -d" " -f1)/bin/activate'
+
+## docker
+alias proxy_drun='sudo docker run --env HTTPS_PROXY=$HTTPS_PROXY --env HTTP_PROXY=$HTTP_PROXY'
+alias proxy_dbuild= 'sudo docker build --build-arg HTTP_PROXY=$HTTP_PROXY --build-arg HTTPS_PROXY=$HTTPS_PROXY'
