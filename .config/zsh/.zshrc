@@ -11,11 +11,12 @@ export PATH="$PATH:$HOME/.local/bin"
 # | MacOS |
 # +-------+
 
-if [ -d "/opt/homebrew/bin" ]; then
-    export PATH=/opt/homebrew/bin:$PATH
-
-else
-    echo "Install brew and run 'brew install coreutils' to get GNU ls, etc."
+if [ "$(uname)" = "Darwin" ]; then
+    if [ -d "/opt/homebrew/bin" ]; then
+        export PATH=/opt/homebrew/bin:$PATH
+    else
+        echo "Install brew and run 'brew install coreutils' to get GNU ls, etc."
+    fi
 fi
 
 
