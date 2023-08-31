@@ -20,6 +20,9 @@ marker:blue,\
 prompt:gray,\
 hl+:red"
 
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 export FZF_DEFAULT_OPTS="--height 60% \
 --border sharp \
 --layout reverse \
