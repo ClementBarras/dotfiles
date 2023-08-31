@@ -2,6 +2,7 @@
 if command -v gls &> /dev/null # MacOS, if gnu ls is installed (brew install coreutils)
 then
     alias ls='gls --color=auto'
+    alias dircolors='gdircolors'
 else
     alias ls='ls -G --color=auto'
 fi
