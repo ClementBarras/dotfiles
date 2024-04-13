@@ -116,7 +116,7 @@ prompt_setup() {
 
     prompt_git_branch
     RPROMPT='$(prompt_git_info) $(git_prompt_status)'
-    PROMPT=$'%F{cyan}%~ %B%F{blue}>%f%b '
+    PROMPT=$'%F{green} [%*] %F{cyan}%m:%~ %B%F{blue}>%f%b '
 }
 
 prompt_setup
